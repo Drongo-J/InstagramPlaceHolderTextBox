@@ -38,7 +38,6 @@ namespace InstagramTextBoxWithPlaceHolder
             placeHolderTBVM2.PlaceHolder = "Password";
 
             MyGrid.Children.Add(testLogin);
-
         }
     }
 }

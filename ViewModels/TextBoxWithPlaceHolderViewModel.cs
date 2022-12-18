@@ -52,11 +52,5 @@ namespace InstagramTextBoxWithPlaceHolder
                 Text = pb.Password;
             });
         }
-
-        private void OnPasswordChanged(object sender, RoutedEventArgs e)
-        {
-            var pb = sender as PasswordBox;
-            Text = pb.Password;
-        }
     }
 }
