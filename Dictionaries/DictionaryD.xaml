@@ -7,4 +7,5 @@
     <SolidColorBrush x:Key="PlaceHolderTboxBorderBrush" Color="#DBDBDB" ></SolidColorBrush>
     <SolidColorBrush x:Key="FocusedPlaceHolderTboxBorderBrush" Color="#A8A8A8" ></SolidColorBrush>
     <SolidColorBrush x:Key="PlaceHolderTboxTextColor" Color="#968E8E" ></SolidColorBrush>
+    <SolidColorBrush x:Key="PlaceHolderTboxBackgroundColor" Color="#FAFAFA" ></SolidColorBrush>
 </ResourceDictionary>

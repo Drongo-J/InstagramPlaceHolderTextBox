@@ -9,39 +9,36 @@
              Width="270"
              MinHeight="40"
              MaxHeight="40"
-             Height="40"
-             x:Name="_this">
-
+             Height="40">
     <UserControl.Resources>
         <Style x:Key="credentialTxTtitleStyle" TargetType="{x:Type TextBlock}">
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Foreground" Value="{StaticResource PlaceHolderTboxTextColor}"/>
-            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontSize" Value="11"/>
 
             <!--Since we want to reuse this control we will use property binding for our placeholder-->
             <Setter Property="Text" Value="{Binding PlaceHolder}"/>
             <Setter Property="Padding" Value="2,0"/>
             <Style.Triggers>
-                <DataTrigger Binding="{Binding EmailText}" Value="">
+                <DataTrigger Binding="{Binding Text, ElementName=text}" Value="">
+
                     <!--Default Position and fontsize of Title-->
                     <DataTrigger.EnterActions>
                         <BeginStoryboard>
                             <Storyboard SpeedRatio="10">
-                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="12"/>
-                                <!--{Binding TextFontSize}-->
-                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="0"/>
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="11"/>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="-3 0 0 0"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </DataTrigger.EnterActions>
 
-                    <!--Position and FontSize of Title when Email Textbox has value-->
+                    <!--Position and FontSize of Title when Text Textbox has value-->
                     <DataTrigger.ExitActions>
                         <BeginStoryboard>
                             <Storyboard SpeedRatio="10">
                                 <DoubleAnimation Storyboard.TargetProperty="FontSize" To="10"/>
-                                <!--{Binding PlaceHolderFontSize}-->
-                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="-2 0 0 17"/>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="-3 0 0 15"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </DataTrigger.ExitActions>
@@ -51,7 +48,7 @@
 
         <Style x:Key="credentialsTxTStyle" TargetType="{x:Type TextBox}">
             <!--same goes for text-->
-            <Setter Property="Text" Value="{Binding EmailText, Mode=TwoWay}"/>
+            <Setter Property="Text" Value="{Binding Text, Mode=TwoWay}"/>
             <Setter Property="TextAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Background" Value="Transparent"/>
@@ -59,37 +56,36 @@
 
             <!--We also need to move our text some point below and also increase font size-->
             <Style.Triggers>
+
                 <!--So, to know when to trigger wwe will first check what is the font size of our title-->
-                <!--if it is 10pt then it means the title in above-->
-                <DataTrigger Binding="{Binding TextFontSize}" Value="12">
+                <!--if it is 15pt then it means the title in above-->
+                <DataTrigger Binding="{Binding FontSize, ElementName=title}" Value="11">
 
                     <!--Default Position and fontsize of Title-->
                     <DataTrigger.EnterActions>
                         <BeginStoryboard>
                             <Storyboard SpeedRatio="10">
-                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="12"/>
-                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="0"/>
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="11"/>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="-3 0 0 0"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </DataTrigger.EnterActions>
-                </DataTrigger>
 
-                <DataTrigger Binding="{Binding TextFontSize}" Value="12">
-                    <Setter Property="Height" Value="20"/>
-                    <Setter Property="Margin" Value="0,5,0,0"/>
-                    <!--Position and FontSize of Title when Email Textbox has value-->
-                    <DataTrigger.EnterActions>
+                    <!--Position and FontSize of Title when Text Textbox has value-->
+                    <DataTrigger.ExitActions>       
                         <BeginStoryboard>
                             <Storyboard SpeedRatio="10">
                                 <DoubleAnimation Storyboard.TargetProperty="FontSize" To="12"/>
-                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="-2,12,0,0"/>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="-3 12 0 0"/>
+                                <DoubleAnimation Storyboard.TargetProperty="Height" From="{Binding ActualHeight, ElementName=text}" To="40"/>
+                                
                             </Storyboard>
                         </BeginStoryboard>
-                    </DataTrigger.EnterActions>
+                    </DataTrigger.ExitActions>
                 </DataTrigger>
 
                 <!--get password inside the textbox if the textbox text is empty-->
-                <DataTrigger Binding="{Binding EmailText, Mode=TwoWay}" Value="">
+                <DataTrigger Binding="{Binding Text, Mode=TwoWay}" Value="">
                     <Setter Property="Text" Value="{Binding Password, ElementName=passbox}"/>
                 </DataTrigger>
 
@@ -99,30 +95,6 @@
                 </DataTrigger>
             </Style.Triggers>
         </Style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <Style TargetType="{x:Type PasswordBox}">
             <Setter Property="Padding" Value="2,0,30,0"/>
@@ -135,25 +107,25 @@
             <Style.Triggers>
 
                 <!--So, to know when to trigger wwe will first check what is the font size of our title-->
-                <!--if it is 7pt then it means the title in above-->
-                <DataTrigger Binding="{Binding FontSize, ElementName=title}" Value="7">
+                <!--if it is 15pt then it means the title in above-->
+                <DataTrigger Binding="{Binding FontSize, ElementName=title}" Value="15">
 
                     <!--Default Position and fontsize of Title-->
                     <DataTrigger.EnterActions>
                         <BeginStoryboard>
                             <Storyboard SpeedRatio="10">
-                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="9"/>
-                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="0 9 0 0"/>
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="20"/>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="0 20 0 0"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </DataTrigger.EnterActions>
 
-                    <!--Position and FontSize of Title when Email Textbox has value-->
+                    <!--Position and FontSize of Title when Text Textbox has value-->
                     <DataTrigger.ExitActions>
                         <BeginStoryboard>
                             <Storyboard SpeedRatio="10">
-                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="7"/>
-                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="0 15 0 0"/>
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="15"/>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="0"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </DataTrigger.ExitActions>
@@ -170,7 +142,7 @@
                 </DataTrigger>
             </Style.Triggers>
         </Style>
-
+        
         <Style TargetType="{x:Type Button}">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="0"/>
@@ -182,7 +154,7 @@
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border Background="{TemplateBinding Background}">
                             <Path 
-                                Width="9"
+                                Width="20"
                                 Stretch="Uniform"
                                 Fill="{TemplateBinding Foreground}"
                                 Data="{StaticResource showPass}"/>
@@ -199,15 +171,14 @@
             </Setter>
         </Style>
     </UserControl.Resources>
-
-
     <Border 
         CornerRadius="2"
         BorderThickness="1"
         BorderBrush="{StaticResource PlaceHolderTboxBorderBrush}"
-        Background="White"
+        Background="{StaticResource PlaceHolderTboxBackgroundColor}"
         Height="40">
-
+        
+        <!--Border Shadow Effect-->
         <Grid Margin="9,6">
             <!--Title-->
             <TextBlock 
@@ -217,7 +188,7 @@
             <!--Textbox-->
             <TextBox 
                 x:Name="text"
-                Text="{Binding EmailText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                Text="{Binding Text,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                 Style="{StaticResource credentialsTxTStyle}"/>
 
             <!--To detect if our textbox is password box or not we will use a bool-->
