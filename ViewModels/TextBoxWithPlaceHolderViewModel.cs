@@ -27,7 +27,6 @@ namespace InstagramTextBoxWithPlaceHolder
             set { text = value; OnPropertyChanged(); }
         }
 
-
         private string placeHolder;
 
         public string PlaceHolder
