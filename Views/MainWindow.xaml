@@ -3,12 +3,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:InstagramTextBoxWithPlaceHolder" 
-        xmlns:views="clr-namespace:InstagramTextBoxWithPlaceHolder.Views"
+        xmlns:local="clr-namespace:InstagramTextBoxWithPlaceHolder.Views"
+        
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="MyGrid">  
-     
+    <Grid Background="White"
+          x:Name="MyGrid">
+        <StackPanel>
+
+            <local:TextBoxWithPlaceHolderUC x:Name="UsernameTB">
+                
+            </local:TextBoxWithPlaceHolderUC>
+            <!--Space-->
+
+            
+            
+            <!--<views:TextBoxWithPlaceHolderUC x:Name="UsernameTB">
+
+            </views:TextBoxWithPlaceHolderUC>
+
+            --><!--Space-->
+
+            <local:TextBoxWithPlaceHolderUC x:Name="PasswordTB">
+
+            </local:TextBoxWithPlaceHolderUC>
+
+
+        </StackPanel>
     </Grid>
 </Window>
     

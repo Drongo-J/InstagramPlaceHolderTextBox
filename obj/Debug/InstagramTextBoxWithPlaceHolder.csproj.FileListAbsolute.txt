@@ -35,16 +35,12 @@ C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\InstagramT
 C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\InstagramTextBoxWithPlaceHolder.csproj.SuggestedBindingRedirects.cache
 C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\Dictionaries\DictionaryD.baml
 C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\Views\MainWindow.g.cs
-C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\Views\TestLoginPage.g.cs
-C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\Views\TextBoxWithPlaceHolder.g.cs
 C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\App.g.cs
 C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\InstagramTextBoxWithPlaceHolder_MarkupCompile.cache
 C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\InstagramTextBoxWithPlaceHolder_MarkupCompile.lref
 C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\App.baml
 C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\Views\MainWindow.baml
-C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\Views\TestLoginPage.baml
-C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\Views\TextBoxWithPlaceHolder.baml
 C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\InstagramTextBoxWithPlaceHolder.g.resources
 C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\InstagramTextBoxWithPlaceHolder.Properties.Resources.resources
 C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\InstagramTextBoxWithPlaceHolder.csproj.GenerateResource.cache
@@ -52,3 +48,5 @@ C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\InstagramT
 C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\InstagramTextBoxWithPlaceHolder.csproj.CopyComplete
 C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\InstagramTextBoxWithPlaceHolder.exe
 C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\InstagramTextBoxWithPlaceHolder.pdb
+C:\Users\Ahme_if16\Source\Repos\InstagramPlaceHolderTextBox\obj\Debug\Views\TextBoxWithPlaceHolderUC.g.cs
+C:\Users\Ahme_if16\source\repos\InstagramPlaceHolderTextBox\obj\Debug\Views\TextBoxWithPlaceHolderUC.baml

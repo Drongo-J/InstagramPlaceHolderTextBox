@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace InstagramTextBoxWithPlaceHolder.Views
 {
     /// <summary>
-    /// Interaction logic for TextBoxWithPlaceHolder.xaml
+    /// Interaction logic for TextBoxWithPlaceHolderUC.xaml
     /// </summary>
-    public partial class TextBoxWithPlaceHolder : UserControl
+    public partial class TextBoxWithPlaceHolderUC : UserControl
     {
-        public TextBoxWithPlaceHolder()
+        public TextBoxWithPlaceHolderUC()
         {
             InitializeComponent();
         }

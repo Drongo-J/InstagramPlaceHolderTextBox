@@ -25,19 +25,15 @@ namespace InstagramTextBoxWithPlaceHolder
         {
             InitializeComponent();
 
-            var testLogin = new TestLoginPage();
-
-            var placeHolderTBVM = new TextBoxWithPlaceHolderViewModel();
-            testLogin.UsernameTB.DataContext = placeHolderTBVM;
-            placeHolderTBVM.IsPassword = false;
+            var placeHolderTBVM = new TextBoxWithPlaceHolderViewModel(UsernameTB.text);
+            UsernameTB.DataContext = placeHolderTBVM;
             placeHolderTBVM.PlaceHolder = "Phone number, username, or email";
+            placeHolderTBVM.IsPassword = false;
 
-            var placeHolderTBVM2 = new TextBoxWithPlaceHolderViewModel();
-            testLogin.PasswordTB.DataContext = placeHolderTBVM2;
+            var placeHolderTBVM2 = new TextBoxWithPlaceHolderViewModel(PasswordTB.text);
+            PasswordTB.DataContext = placeHolderTBVM2;
             placeHolderTBVM2.IsPassword = true;
             placeHolderTBVM2.PlaceHolder = "Password";
-
-            MyGrid.Children.Add(testLogin);
         }
     }
 }

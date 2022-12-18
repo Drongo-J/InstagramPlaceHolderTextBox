@@ -43,10 +43,29 @@ namespace InstagramTextBoxWithPlaceHolder
             set { isPassword = value; OnPropertyChanged(); }
         }
 
-        public TextBoxWithPlaceHolderViewModel()
+        public TextBox TextBox { get; set; }
+
+        /// <summary>
+        /// View model for the text box with place holder
+        /// <para>Warning: Send the TextBox called "text" of TextBoxWithPlaceHolderUC as a parameter</para>
+        /// 
+        /// </summary>
+        /// 
+        bool hasGivenWidth = false;
+
+        public TextBoxWithPlaceHolderViewModel(TextBox textbox)
         {
+            TextBox = textbox;
             PasswordChangedCommand = new RelayCommand((p) =>
             {
+                if (!hasGivenWidth)
+                {
+                    hasGivenWidth = true;
+                    if (isPassword)
+                    {
+                        textbox.Width = 230;
+                    }
+                }
                 var pb = p as PasswordBox;
                 Text = pb.Password;
             });

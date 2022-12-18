@@ -60,11 +60,8 @@
     </ApplicationDefinition>
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\TextBoxWithPlaceHolderViewModel.cs" />
-    <Compile Include="Views\TestLoginPage.xaml.cs">
-      <DependentUpon>TestLoginPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TextBoxWithPlaceHolder.xaml.cs">
-      <DependentUpon>TextBoxWithPlaceHolder.xaml</DependentUpon>
+    <Compile Include="Views\TextBoxWithPlaceHolderUC.xaml.cs">
+      <DependentUpon>TextBoxWithPlaceHolderUC.xaml</DependentUpon>
     </Compile>
     <Page Include="Dictionaries\DictionaryD.xaml">
       <SubType>Designer</SubType>
@@ -83,11 +80,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\TestLoginPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\TextBoxWithPlaceHolder.xaml">
+    <Page Include="Views\TextBoxWithPlaceHolderUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
